@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/', 'ImportExcelController@index');
+Route::post('/import_excel/import', 'ImportExcelController@import');

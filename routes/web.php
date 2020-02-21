@@ -17,3 +17,5 @@ Route::get('/', 'ImportExcelController@index');
 Route::post('/import', 'ImportExcelController@import');
 Route::get('/edit/{id}', 'ImportExcelController@edit');
 Route::put('/update/{id}', 'ImportExcelController@update')->name('import_excel.update');
+
+Route::get('/export_to_pdf', 'ExportToPdfController@exportToPdf')->name('pdf.exportToPdf');;

@@ -29,6 +29,9 @@
            <strong>{{ $message }}</strong>
    </div>
    @endif
+
+   <a  href="{{route('pdf.exportToPdf')}}">Generuj PDF</a>
+   <br>
    <form method="post" enctype="multipart/form-data" action="{{ url('/import') }}">
     {{ csrf_field() }}
     <div class="form-group">

@@ -16,4 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('/', 'ImportExcelController@index');
-Route::post('/import_excel/import', 'ImportExcelController@import');
+Route::post('/import', 'ImportExcelController@import');
+Route::get('/edit/{id}', 'ImportExcelController@edit');
+Route::put('/update/{id}', 'ImportExcelController@update')->name('import_excel.update');

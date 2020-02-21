@@ -39,6 +39,34 @@ class ImportExcelController extends Controller
             }
         }
      
+      
         return back()->with('success', 'Dane zostały zaimportowne poprwanie.');
+    }
+
+    public function edit($id)
+    {
+        $person = Person::where('id', '=', $id)->firstOrFail();
+        return view('edit', compact('person'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $this->validate(
+            $request,
+            [
+                'postac' => 'required',
+                'entuzjazm' => 'required',
+                'kreatywnosc' => 'required',
+                'blyskotliwosc' => 'required',
+ 
+
+            ]
+        );
+        Person::where('id', '=', $id)->update(request([
+          'postac',
+           'entuzjazm',
+           'kreatywnosc',
+           'blyskotliwosc']));
+        return redirect('/');
     }
 }

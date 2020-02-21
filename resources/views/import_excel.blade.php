@@ -29,7 +29,7 @@
            <strong>{{ $message }}</strong>
    </div>
    @endif
-   <form method="post" enctype="multipart/form-data" action="{{ url('/import_excel/import') }}">
+   <form method="post" enctype="multipart/form-data" action="{{ url('/import') }}">
     {{ csrf_field() }}
     <div class="form-group">
      <table class="table">
@@ -77,7 +77,7 @@
         <td>{{ $row->kreatywnosc }}</td>
         <td>{{ $row->blyskotliwosc }}</td>
         <td>{{ $row->spokoj_wewnetrzny }}</td>
-        <td><a class="btn btn-outline-dark" href="{{url('import_excel/edit/' . $row->id)}}" role="button">Edytuj
+        <td><a class="btn btn-outline-dark" href="{{url('edit/' . $row->id)}}" role="button">Edytuj
         </a></td>
      
        </tr>

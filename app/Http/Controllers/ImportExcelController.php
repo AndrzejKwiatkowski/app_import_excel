@@ -55,9 +55,9 @@ class ImportExcelController extends Controller
             $request,
             [
                 'postac' => 'required',
-                'entuzjazm' => 'required',
-                'kreatywnosc' => 'required',
-                'blyskotliwosc' => 'required',
+                'entuzjazm' => 'required|integer',
+                'kreatywnosc' => 'required|integer',
+                'blyskotliwosc' => 'required|integer',
  
 
             ]
